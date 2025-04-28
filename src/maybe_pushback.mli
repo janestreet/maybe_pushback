@@ -15,6 +15,7 @@ val to_deferred : 'a t -> 'a Deferred.t
 val of_deferred : 'a Deferred.t -> 'a t
 val unit : unit t
 val peek : 'a t -> 'a option
+val ok : 'a t -> ('a, _) Result.t t
 
 module List : sig
   val all_unit : unit t list -> unit t
